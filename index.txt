@@ -1,5 +1,5 @@
-open_webpage.py
-open_chrome_profile.py
-cleanup
-Uts.verify.py
-Uts.exit.py
+PhlegethonCore.open_webpage
+PhlegethonCore.open_chrome_profile
+PhlegethonCore.Utils.cleanup
+PhlegethonCore.Utils.verify
+PhlegethonCore.Utils.exit

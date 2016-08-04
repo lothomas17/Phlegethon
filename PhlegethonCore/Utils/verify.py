@@ -1,5 +1,17 @@
 import sys,os
 
+def getProjectContents():
+	directoryContents = []
+
+	for dirname, dirnames, filenames in os.walk('.'):
+		# print path to all filenames.
+		for filename in filenames:
+			fileName = os.path.join(dirname, filename)
+			if('git' in fileName):
+				continue
+			directoryContents.append(fileName[2:])
+
+	return directoryContents
 
 def run():
 
@@ -10,14 +22,13 @@ def run():
 		newLine = line.replace('\n','')
 		contents.append(line)
 
-	directoryName = os.path.dirname(os.path.abspath(__file__))
-	directoryContents = os.listdir(directoryName)
+	directoryContents = getProjectContents()
 
 	dangerFlag = 0
 	for entry in contents:
 		actualEntry = entry.rstrip()
 		if actualEntry not in directoryContents:
-			errorMessage = "The file ", actualEntry, " is not present."
+			errorMessage = "The file " + actualEntry + " is not present."
 			print errorMessage
 			raise ValueError(errorMessage)
 			dangerFlag = 1
