@@ -1,5 +1,0 @@
-open_webpage.py
-open_chrome_profile.py
-cleanup.py
-Uts.verify.py
-Uts.exit.py

@@ -6,7 +6,7 @@ from pydoc import locate
 def generateImports():
 
 	modules = []
-	f = open('index.txt','r')
+	f = open('textFiles/index.txt','r')
 
 	for line in f:
 		truncLine = line.replace('\n','')
@@ -22,7 +22,7 @@ def generateImports():
 def generateDict():
 
 	modDict = {}
-	f = open('index.txt','r')
+	f = open('textFiles/index.txt','r')
 
 	for line in f:
 		truncLine = line.replace('\n','')

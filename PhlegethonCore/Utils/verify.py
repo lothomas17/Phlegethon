@@ -16,7 +16,7 @@ def getProjectContents():
 def run():
 
 	contents = []
-	f = open('dirContents.txt','r')
+	f = open('textFiles/dirContents.txt','r')
 
 	for line in f:
 		newLine = line.replace('\n','')

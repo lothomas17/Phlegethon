@@ -23,7 +23,7 @@ def identifyFunction(input):
 	maxLen = 0
 	retIndex = 0
 
-	f = open("index.txt", 'r')
+	f = open("textFiles/index.txt", 'r')
 	for line in f:
 		if not line:
 			print "There has been an error"

@@ -28,7 +28,7 @@ def identifyTemplate(input):
 	maxLen = 0
 	retIndex = 0
 
-	f = open("webindex.txt", 'r')
+	f = open("textFiles/webindex.txt", 'r')
 	for line in f:
 		if not line:
 			print "There has been an error"
@@ -53,6 +53,7 @@ def identifyTemplate(input):
 		index += 1
 
 	toReturn = options[retIndex] + ".txt"
+	toReturn = "textFiles/" + toReturn
 	return toReturn
 
 #takes user input and assigns it to a URL variable
